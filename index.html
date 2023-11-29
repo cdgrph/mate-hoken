@@ -4,13 +4,61 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>MATE. 盗難＆車両保険</title>
     <link rel="stylesheet" href="/style.css">
     <script src="/main.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/gsb2lwn.css">
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div class="hkn">
+      <div class="hkn-top">
+        <h1 class="hkn-pageTitle">MATE. 盗難＆車両保険</h1>
+        <img src="/title.svg" alt="">
+      </div>
+      <nav class="hkn-menu">
+        <ol>
+          <li><a href="#overview">概要</a></li>
+          <li><a href="#keyPoints">4つのPoint</a></li>
+          <li><a href="#premiums">保険料</a></li>
+          <li><a href="#coverageDetails">補償内容</a></li>
+          <li><a href="#quoteApplication">お見積り＆お申し込み</a></li>
+        </ol>
+      </nav>
+      <div id="overview" class="hkn-overview">
+        <div class="hkn-overview-container">
+          <picture>
+            <source srcset="/s1_lg.webp" media="(min-width: 1024px)" type="image/webp">
+            <img class="hkn-overview-photo" src="/s1.webp" alt="">
+          </picture>
+          <div class="hkn-overview-content">
+            <h2 class="hkn-sectionTitle">あなたのMATE.ライフ<wbr>を守ります</h2>
+            <p>車体の破損および盗難を補償する「MATE.BIKEオーナー」専用の盗難&車両保険です。<br>
+              破損、もしくは盗難にあった場合に購入価格を補償します。(全損・盗難の場合)</p>
+          </div>
+        </div>
+      </div>
+      <div id="keyPoints" class="hkn-keyPoints"></div>
+      <div id="premiums" class="hkn-premiums"></div>
+      <div id="coverageDetails" class="hkn-coverageDetails"></div>
+      <div id="quoteApplication" class="hkn-quoteApplication"></div>
+      <nav class="hkn-menu--mobile" x-data="{open: false}" @click.outside="open = false">
+        <button class="hkn-menu--mobile-toggle" @click="open = ! open">MENU</button>
+        <div x-show="open" x-collapse>
+          <ol>
+            <li><a href="#overview">概要</a></li>
+            <li><a href="#keyPoints">4つのPoint</a></li>
+            <li><a href="#premiums">保険料</a></li>
+            <li><a href="#coverageDetails">補償内容</a></li>
+            <li><a href="#quoteApplication">お見積り＆お申し込み</a></li>
+          </ol>
+        </div>
+        <button class="hkn-menu--mobile-close" @click="open = false"></button>
+      </nav>
+    </div>
   </body>
 </html>
