@@ -10,6 +10,13 @@
   }
 }
 
+.hkn-pageTitle {
+  @apply font-bold  text-xl sm:text-3xl;
+}
+.hkn-sectionTitle {
+  @apply font-bold text-2xl 2xl:text-3xl tracking-wider;
+}
+
 .hkn-top {
   @apply text-white bg-no-repeat bg-cover bg-[75%_top] h-screen lg:h-auto flex flex-col justify-center items-center gap-12 px-8 lg:aspect-[3/2] w-full
     bg-[url('/s0.webp')]
@@ -20,7 +27,7 @@
     2xl:bg-[url('/s0_2xl.webp')];
 
   & img {
-    @apply lg:w-[40%] xl:w-1/3;
+    @apply lg:w-[40%] xl:w-1/3 w-full max-w-md;
   }
 }
 
@@ -52,6 +59,8 @@
   }
 }
 
+/*------ メニュー -------*/
+
 .hkn-menu {
   @apply relative hidden lg:block;
   & ol {
@@ -63,7 +72,10 @@
 }
 
 .hkn-menu--mobile {
-  @apply text-white bg-black px-14 lg:hidden fixed bottom-0 left-0 right-0 z-50;
+  @apply text-white bg-black px-14 lg:hidden fixed bottom-0 left-0 right-0 z-50 transition-transform duration-300 ease-out;
+  &.closed {
+    transform: translateY(calc(100% - 10px));
+  }
   & ol {
     @apply mx-auto max-w-xs py-14;
   }
@@ -72,7 +84,7 @@
   }
 }
 .hkn-menu--mobile-toggle {
-  @apply absolute bottom-full left-0 ml-[8vw] pt-3 px-5 font-gibson tracking-widest font-bold italic bg-black rounded-t-2xl;
+  @apply absolute bottom-full translate-y-1 left-0 ml-[8vw] pt-3 px-5 font-gibson tracking-widest font-bold italic bg-black rounded-t-2xl;
 }
 .hkn-menu--mobile-close {
   @apply absolute top-0 right-0 mt-6 mr-[6vw];
@@ -85,8 +97,10 @@
   }
 }
 
+/*------ 保険概要 -------*/
+
 .hkn-overview {
-  @apply flex flex-col justify-center items-end w-full py-32;
+  @apply flex flex-col justify-center items-end w-full py-32 lg:py-44;
   margin-top: 9vw;
   & .container {
     @apply flex flex-col justify-center items-center gap-12 px-8 lg:aspect-[3/2] w-full;
@@ -124,10 +138,63 @@
   }
 }
 
+/*------ 4つのPoint -------*/
 
-.hkn-pageTitle {
-  @apply font-bold text-3xl 2xl:text-4xl;
+.hkn-keyPoints {
+  @apply bg-black text-white py-32 lg:py-44;
 }
-.hkn-sectionTitle {
-  @apply font-bold text-2xl 2xl:text-3xl tracking-wider;
+.hkn-keyPoints-container {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-32 w-full relative;
+  &::before {
+    @apply block absolute top-0 right-12 lg:right-16 whitespace-nowrap font-gibson font-bold z-10 origin-top-right -rotate-90 -translate-y-12 text-xs tracking-wider;
+    content: 'COMPENSATION';
+  }
+  &::after {
+    @apply block absolute top-0 left-0 whitespace-nowrap font-gibson font-bold z-10 tracking-wider;
+    content: '02';
+    font-size: 22vw;
+    transform: translate(40%, -50%);
+    @media (min-width: 1024px) {
+      font-size: 14vw;
+      transform: translate(50%, -50%);
+    }
+  }
+}
+.hkn-keyPoints-photo {
+  @apply w-full;
+}
+.hkn-keyPoints-content {
+  @apply px-8 lg:pl-0 lg:pr-16 xl:pr-24 max-w-2xl mx-auto lg:mx-0;
+}
+.hkn-keyPoints-sectionTitle {
+  @apply text-center lg:text-left lg:mt-8;
+}
+.hkn-keyPoints-list {
+  @apply text-center lg:text-left flex flex-col gap-10 my-10 lg:mt-24 border-b-2 border-white pb-10;
+}
+.hkn-keyPoints-item {
+  @apply flex flex-col lg:flex-row gap-2 lg:gap-12;
+  h3 {
+    @apply font-bold mt-1 lg:text-base;
+  }
+  &::before {
+    @apply block;
+  }
+  &:nth-child(1)::before {
+    content: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22124%22%20height%3D%2236%22%20fill%3D%22none%22%20viewBox%3D%220%200%20124%2036%22%3E%20%3Cpath%20stroke%3D%22%23E0BB49%22%20stroke-linecap%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%225%22%20d%3D%22M32.02%2023.94v2.7c0%203.15-2.55%205.7-5.7%205.7H8.7A5.69%205.69%200%200%201%203%2026.63V9.01c0-3.15%202.55-5.7%205.7-5.7h17.62c3.15%200%205.7%202.55%205.7%205.7v1.24%22%2F%3E%20%3Cpath%20stroke%3D%22%23E0BB49%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%225%22%20d%3D%22m12.86%2013.78%206.22%207.17%2019.8-15.13%22%2F%3E%20%3Cpath%20fill%3D%22%23E0BB49%22%20d%3D%22M55.12%2014.9c-.43-.7-1.69-1.1-2.44-1.1-2.15%200-3.59%201.81-3.59%203.88%200%201.56%201.01%202.55%202.57%202.55%201.07%200%202.13-.38%202.9-1.12l.54%202c-1.05.98-2.5%201.4-3.93%201.4-2.69%200-4.56-1.64-4.56-4.38%200-3.63%202.57-6.5%206.27-6.5%201.07%200%202.6.3%203.32%201.2l-1.08%202.06Zm12.9-3.13-1.67%2010.55h-2.4l.7-4.4H60.6l-.68%204.4h-2.4l1.66-10.55h2.4l-.64%204.07h4.04l.64-4.07h2.4Zm10.06%200-.32%202h-4.19l-.34%202.12h3.96l-.32%202h-3.96l-.38%202.42h4.33l-.32%202.01h-6.72l1.67-10.55h6.6Zm10.25%203.12c-.43-.68-1.69-1.1-2.44-1.1-2.15%200-3.59%201.82-3.59%203.89%200%201.56%201.01%202.55%202.57%202.55%201.07%200%202.13-.38%202.9-1.12l.54%202c-1.05.98-2.5%201.4-3.93%201.4-2.69%200-4.56-1.64-4.56-4.38%200-3.63%202.57-6.5%206.27-6.5%201.07%200%202.6.3%203.32%201.2l-1.08%202.06Zm12.41-3.12-4.25%204.2%202.83%206.35h-2.9l-1.83-4.38-.93.91-.55%203.47h-2.38l1.66-10.55h2.39l-.6%203.83%203.7-3.83h2.86Z%22%2F%3E%20%3Cpath%20fill%3D%22%23E0BB49%22%20d%3D%22m121.73%203.7-3.9%2024.62h-5.41L115.7%207.7h-4.28l.6-4h9.7Z%22%2F%3E%3C%2Fsvg%3E');
+  }
+  &:nth-child(2)::before {
+    content: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22130%22%20height%3D%2236%22%20fill%3D%22none%22%20viewBox%3D%220%200%20130%2036%22%3E%20%3Cpath%20stroke%3D%22%23E0BB49%22%20stroke-linecap%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%225%22%20d%3D%22M32.02%2024.57v2.7c0%203.15-2.55%205.7-5.7%205.7H8.7A5.69%205.69%200%200%201%203%2027.26V9.64c0-3.15%202.55-5.7%205.7-5.7h17.62c3.15%200%205.7%202.55%205.7%205.7v1.24%22%2F%3E%20%3Cpath%20stroke%3D%22%23E0BB49%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%225%22%20d%3D%22m12.86%2014.4%206.22%207.18%2019.8-15.13%22%2F%3E%20%3Cpath%20fill%3D%22%23E0BB49%22%20d%3D%22M55.46%2015.25c-.44-.72-1.74-1.14-2.52-1.14-2.24%200-3.73%201.88-3.73%204.02%200%201.62%201.05%202.65%202.67%202.65%201.1%200%202.2-.4%203.01-1.16l.55%202.07a5.86%205.86%200%200%201-4.07%201.45c-2.79%200-4.72-1.7-4.72-4.53%200-3.77%202.66-6.75%206.5-6.75%201.1%200%202.7.31%203.44%201.25l-1.13%202.14ZM68.84%2012l-1.73%2010.94h-2.49l.73-4.56h-4.2l-.71%204.56h-2.5l1.74-10.94h2.49l-.67%204.22h4.19l.66-4.22h2.5Zm10.43%200-.33%202.08H74.6l-.35%202.19h4.1l-.33%202.08h-4.1l-.4%202.5H78l-.34%202.1h-6.96L72.44%2012h6.83Zm10.63%203.24c-.45-.72-1.75-1.14-2.52-1.14-2.24%200-3.73%201.88-3.73%204.02%200%201.62%201.05%202.65%202.66%202.65%201.11%200%202.2-.4%203.02-1.16l.55%202.07a5.86%205.86%200%200%201-4.07%201.45c-2.8%200-4.73-1.7-4.73-4.53%200-3.77%202.67-6.75%206.5-6.75%201.11%200%202.7.31%203.44%201.25l-1.12%202.14ZM102.77%2012l-4.4%204.36%202.93%206.58h-3l-1.9-4.55-.97.95-.57%203.6h-2.47l1.72-10.94h2.48l-.62%203.97L99.8%2012h2.96Z%22%2F%3E%20%3Cpath%20fill%3D%22%23E0BB49%22%20d%3D%22M128.57%209.31c0%204.62-3.07%207.62-6.43%2010.25l-5.96%204.7h11.25l-.74%204.7h-18.02l-.07-3.85%209.54-7.77c2-1.63%204.7-3.85%204.7-6.66%200-2-1.6-2.85-3.4-2.85-2.52%200-4.74%201.6-6.4%203.37L111.1%207.3c2.15-2.7%205.63-4.25%209.62-4.25%204%200%207.84%201.74%207.84%206.25Z%22%2F%3E%3C%2Fsvg%3E');
+  }
+  &:nth-child(3)::before {
+    content: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22130%22%20height%3D%2236%22%20fill%3D%22none%22%20viewBox%3D%220%200%20130%2036%22%3E%20%3Cpath%20stroke%3D%22%23E0BB49%22%20stroke-linecap%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%225%22%20d%3D%22M32.02%2024.57v2.7c0%203.15-2.55%205.7-5.7%205.7H8.7A5.69%205.69%200%200%201%203%2027.26V9.64c0-3.15%202.55-5.7%205.7-5.7h17.62c3.15%200%205.7%202.55%205.7%205.7v1.24%22%2F%3E%20%3Cpath%20stroke%3D%22%23E0BB49%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%225%22%20d%3D%22m12.86%2014.4%206.22%207.18%2019.8-15.13%22%2F%3E%20%3Cpath%20fill%3D%22%23E0BB49%22%20d%3D%22M54.93%2015.67c-.42-.68-1.65-1.08-2.38-1.08-2.11%200-3.52%201.78-3.52%203.8%200%201.54.99%202.51%202.51%202.51%201.05%200%202.09-.37%202.85-1.1l.53%201.95a5.54%205.54%200%200%201-3.86%201.38c-2.63%200-4.46-1.6-4.46-4.28%200-3.57%202.52-6.39%206.14-6.39%201.05%200%202.55.3%203.26%201.18l-1.07%202.03Zm12.65-3.06-1.63%2010.34H63.6l.69-4.31H60.3l-.67%204.31h-2.35l1.63-10.34h2.35l-.63%203.99h3.96l.63-3.99h2.35Zm9.87%200-.32%201.96h-4.1l-.33%202.07h3.88l-.32%201.97h-3.88l-.37%202.37h4.24l-.32%201.97h-6.58L71%2012.61h6.46Zm10.04%203.06c-.42-.68-1.65-1.08-2.38-1.08-2.11%200-3.52%201.78-3.52%203.8%200%201.54.99%202.51%202.52%202.51%201.04%200%202.08-.37%202.84-1.1l.53%201.95a5.54%205.54%200%200%201-3.85%201.38c-2.64%200-4.47-1.6-4.47-4.28%200-3.57%202.52-6.39%206.14-6.39%201.05%200%202.55.3%203.26%201.18l-1.07%202.03Zm12.17-3.06-4.16%204.12%202.77%206.22h-2.83l-1.8-4.3-.92.9-.54%203.4h-2.33l1.63-10.34h2.34l-.59%203.75%203.63-3.75h2.8Z%22%2F%3E%20%3Cpath%20fill%3D%22%23E0BB49%22%20d%3D%22M127.34%2010c0%203.84-2.13%205.14-4.26%206.22v.04a4.63%204.63%200%200%201%203.28%204.58c0%205.67-5.28%208.5-10.35%208.5-2.9%200-6.43-1.3-7.87-4.02l3.08-3.43c1.01%201.57%203.29%203%205.21%203%202.31%200%204.62-1.36%204.62-3.91%200-2.41-2.17-2.62-4.02-2.62h-1.26l.63-4.03h.56c2.34%200%205.03-.1%205.03-3.28%200-1.65-1.47-2.28-2.9-2.28-2.2%200-4.23%201.09-5.95%202.35l-1.47-3.6a12.64%2012.64%200%200%201%208.5-3.05c3.36%200%207.17%201.64%207.17%205.53Z%22%2F%3E%3C%2Fsvg%3E');
+  }
+  &:nth-child(4)::before {
+    content: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22130%22%20height%3D%2236%22%20fill%3D%22none%22%20viewBox%3D%220%200%20130%2036%22%3E%20%3Cpath%20stroke%3D%22%23E0BB49%22%20stroke-linecap%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%225%22%20d%3D%22M32.02%2024.57v2.7c0%203.15-2.55%205.7-5.7%205.7H8.7A5.69%205.69%200%200%201%203%2027.26V9.64c0-3.15%202.55-5.7%205.7-5.7h17.62c3.15%200%205.7%202.55%205.7%205.7v1.24%22%2F%3E%20%3Cpath%20stroke%3D%22%23E0BB49%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%225%22%20d%3D%22m12.86%2014.4%206.22%207.18%2019.8-15.13%22%2F%3E%20%3Cpath%20fill%3D%22%23E0BB49%22%20d%3D%22M54.7%2015.85c-.4-.66-1.6-1.06-2.32-1.06-2.06%200-3.43%201.74-3.43%203.72%200%201.49.96%202.44%202.45%202.44%201.03%200%202.04-.37%202.78-1.07l.51%201.9a5.4%205.4%200%200%201-3.75%201.35c-2.58%200-4.36-1.57-4.36-4.18%200-3.48%202.45-6.23%206-6.23%201.02%200%202.48.29%203.17%201.15l-1.04%201.98Zm12.35-2.99-1.6%2010.1h-2.29l.67-4.22h-3.87l-.66%204.21H57l1.6-10.09h2.3l-.62%203.9h3.86l.62-3.9h2.3Zm9.63%200-.31%201.92h-4l-.33%202.02h3.79l-.3%201.91h-3.8l-.36%202.31h4.14l-.31%201.93h-6.42l1.6-10.09h6.3Zm9.8%202.99c-.41-.66-1.61-1.06-2.33-1.06-2.06%200-3.44%201.74-3.44%203.72%200%201.49.97%202.44%202.46%202.44%201.02%200%202.03-.37%202.78-1.07l.51%201.9a5.4%205.4%200%200%201-3.76%201.35c-2.57%200-4.36-1.57-4.36-4.18%200-3.48%202.46-6.23%206-6.23%201.02%200%202.49.29%203.17%201.15l-1.03%201.98Zm11.87-2.99-4.07%204.02L97%2022.95h-2.76l-1.76-4.2-.9.88-.52%203.32h-2.28l1.6-10.09h2.28l-.57%203.66%203.54-3.66h2.73Z%22%2F%3E%20%3Cpath%20fill%3D%22%23E0BB49%22%20d%3D%22m127.28%2019.94-.68%204.3h-2.97l-.75%204.71h-5.19l.76-4.7h-11.03l.65-4.34L120.8%205.34h5.8l-2.28%2014.6h2.96Zm-6.65-8.87-7.61%208.98h6.21l1.4-8.98Z%22%2F%3E%3C%2Fsvg%3E');
+  }
+}
+.hkn-keyPoints-detail {
+  p + p {
+    @apply mt-8;
+  }
 }

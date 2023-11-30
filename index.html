@@ -22,7 +22,7 @@
       </div>
       <nav class="hkn-menu">
         <ol>
-          <li><a href="#overview">概要</a></li>
+          <li><a href="#overview">保険概要</a></li>
           <li><a href="#keyPoints">4つのPoint</a></li>
           <li><a href="#premiums">保険料</a></li>
           <li><a href="#coverageDetails">補償内容</a></li>
@@ -42,15 +42,60 @@
           </div>
         </div>
       </div>
-      <div id="keyPoints" class="hkn-keyPoints"></div>
+      <div id="keyPoints" class="hkn-keyPoints">
+        <div class="hkn-keyPoints-container">
+          <div>
+            <picture>
+              <source srcset="/s2_xl.webp" media="(min-width: 1536px)" type="image/webp">
+              <source srcset="/s2_lg.webp" media="(min-width: 1280px)" type="image/webp">
+              <source srcset="/s2_md.webp" media="(min-width: 768px)" type="image/webp">
+              <source srcset="/s2_sm.webp" media="(min-width: 640px)" type="image/webp">
+              <img class="hkn-keyPoints-photo" src="/s2.webp" alt="">
+            </picture>
+          </div>
+          <div class="hkn-keyPoints-content">
+            <h2 class="hkn-sectionTitle hkn-keyPoints-sectionTitle">4つのPoint</h2>
+            <ol class="hkn-keyPoints-list">
+              <li class="hkn-keyPoints-item">
+                <div>
+                  <h3>購入時期に関わらずいつでも加入が可能</h3>
+                </div>
+              </li>
+              <li class="hkn-keyPoints-item">
+                <div>
+                  <h3>中古車でも加入可能</h3>
+                </div>
+              </li>
+              <li class="hkn-keyPoints-item">
+                <div>
+                  <h3>更新後も補償額は契約時のまま</h3>
+                  <p>※１年更新</p>
+                </div>
+              </li>
+              <li class="hkn-keyPoints-item">
+                <div>
+                  <h3>パーツやアクセサリーも対象</h3>
+                </div>
+              </li>
+            </ol>
+            <div class="hkn-keyPoints-detail">
+              <p>購入時に付けたパーツやアクセサリーも補償対象となります。<br>
+                例：純正フロントライト、リアライト、フェンダー</p>
+              <p>※補償対象となるパーツ&アクセサリーは、車両に定着あるいは装備されているものとします。<br>
+                ・定着：ボルト/ナット/ねじ等で固定されており、工具等を使用しなければ容易に取り外せない状態をいいます。<br>
+                ・装備：車両の機能を十分に発揮させるために備品として備えつけられている状態または法令に従い車両に備えつけられている状態をいいます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="premiums" class="hkn-premiums"></div>
       <div id="coverageDetails" class="hkn-coverageDetails"></div>
       <div id="quoteApplication" class="hkn-quoteApplication"></div>
-      <nav class="hkn-menu--mobile" x-data="{open: false}" @click.outside="open = false">
+      <nav class="hkn-menu--mobile" x-data="{open: false}" @click.outside="open = false" :class="open ? '' : 'closed'">
         <button class="hkn-menu--mobile-toggle" @click="open = ! open">MENU</button>
-        <div x-show="open" x-collapse>
+        <div>
           <ol>
-            <li><a href="#overview">概要</a></li>
+            <li><a href="#overview">保険概要</a></li>
             <li><a href="#keyPoints">4つのPoint</a></li>
             <li><a href="#premiums">保険料</a></li>
             <li><a href="#coverageDetails">補償内容</a></li>
