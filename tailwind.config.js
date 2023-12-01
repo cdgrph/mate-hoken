@@ -8,6 +8,7 @@ export default {
         'white': '#F2EFE7',
       },
       fontFamily: {
+        'sans': ['Inter', '"Zen Kaku Gothic New"', 'sans-serif'],
         'gibson': 'canada-type-gibson',
       },
     },

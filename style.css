@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 .hkn {
-  @apply tracking-wide text-black bg-white;
-  font-family: 'Zen Kaku Gothic New', sans-serif;
+  @apply tracking-wide text-black bg-white font-sans;
   & p {
     @apply leading-loose;
   }
@@ -39,7 +38,7 @@
   & a {
     @apply flex items-center justify-between gap-6 w-full py-1 border-b-2 text-xs;
     &::before {
-      @apply block font-gibson font-bold tracking-wider text-xl;
+      @apply block font-gibson font-bold text-xl;
     }
   }
   & li:nth-child(1) a::before {
@@ -74,7 +73,7 @@
 .hkn-menu--mobile {
   @apply text-white bg-black px-14 lg:hidden fixed bottom-0 left-0 right-0 z-50 transition-transform duration-300 ease-out;
   &.closed {
-    transform: translateY(calc(100% - 10px));
+    transform: translateY(calc(100% - 8px));
   }
   & ol {
     @apply mx-auto max-w-xs py-14;
@@ -113,12 +112,12 @@
     content: 'FOR MATE.OWNER ONLY';
   }
   &::after {
-    @apply block absolute top-0 right-0 whitespace-nowrap font-gibson font-bold z-10 tracking-wider;
+    @apply block absolute top-0 right-0 whitespace-nowrap font-gibson font-bold z-10;
     content: '01';
     font-size: 22vw;
     transform: translate(-40%, -61%);
     @media (min-width: 1024px) {
-      font-size: 14vw;
+      font-size: 12vw;
       transform: translate(-50%, -61%);
     }
   }
@@ -129,8 +128,7 @@
 .hkn-overview-content {
   @apply flex flex-col lg:flex-row gap-6 lg:gap-12 xl:gap-16 w-full pr-10;
   & .hkn-sectionTitle {
-    @apply shrink-0 break-keep;
-    width: 11em;
+    @apply shrink-0 break-keep max-w-[11em];
   }
   & p {
     @apply flex-1 lg:max-w-[22em];
@@ -150,12 +148,12 @@
     content: 'COMPENSATION';
   }
   &::after {
-    @apply block absolute top-0 left-0 whitespace-nowrap font-gibson font-bold z-10 tracking-wider;
+    @apply block absolute top-0 left-0 whitespace-nowrap font-gibson font-bold z-10;
     content: '02';
     font-size: 22vw;
     transform: translate(40%, -50%);
     @media (min-width: 1024px) {
-      font-size: 14vw;
+      font-size: 12vw;
       transform: translate(50%, -50%);
     }
   }
@@ -175,7 +173,7 @@
 .hkn-keyPoints-item {
   @apply flex flex-col lg:flex-row gap-2 lg:gap-12;
   h3 {
-    @apply font-bold mt-1 lg:text-base;
+    @apply font-bold mt-1 text-base;
   }
   &::before {
     @apply block;
@@ -194,7 +192,113 @@
   }
 }
 .hkn-keyPoints-detail {
+  @apply text-xs;
   p + p {
     @apply mt-8;
   }
+}
+
+/*------ 保険料シミュレーション -------*/
+
+.hkn-premiumSimulation {
+  @apply py-32 lg:py-44;
+}
+.hkn-premiumSimlation-container {
+  @apply relative;
+}
+.hkn-premiumSimlation-sectionTitle {
+  @apply text-center lg:text-left lg:max-w-2xl lg:absolute right-1/2 lg:w-1/2 lg:px-6 xl:px-10 2xl:px-12 z-10;
+  &::before {
+    @apply block whitespace-nowrap font-gibson font-bold leading-none text-left translate-x-[10vw] lg:translate-x-0 mb-1;
+    content: '03';
+    font-size: 22vw;
+    @media (min-width: 1024px) {
+      font-size: 12vw;
+    }
+  }
+}
+.hkn-premiumSimulation-content {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-0 w-full relative mt-8;
+}
+.hkn-premiumSimulation-splide1 {
+  @apply lg:order-2 lg:pl-6 xl:pl-10 2xl:pl-12;
+}
+.hkn-premiumSimulation-splide2 {
+  @apply lg:order-1 lg:flex lg:flex-col justify-end gap-12 w-full max-w-2xl mx-auto lg:mr-0 lg:px-6 xl:px-10 2xl:px-12;
+  img {
+    @apply hidden lg:block w-full;
+  }
+  .splide__pagination {
+    @apply hidden lg:block;
+  }
+  .splide__slide {
+    & > div {
+      @apply lg:grid grid-cols-2 justify-end items-end ;
+      & > div:first-child {
+        @apply pr-6;
+      
+      }
+      & + p {
+        @apply mt-3 text-xs sm:text-center lg:text-left px-8 lg:px-0 ;
+      }
+    }
+  }
+  .splide__arrows, .splide__pagination {
+    @apply absolute;
+  }
+  .splide__arrows {
+    @apply top-1/2 left-0 -translate-y-12 w-full flex justify-between items-center px-8 lg:max-w-2xl lg:top-full pointer-events-none lg:translate-x-1/2 lg:translate-y-12 z-10 lg:justify-around;
+  }
+  .splide__arrow {
+    @apply w-8 h-8 rounded-full bg-black p-2.5 opacity-30 lg:opacity-100 pointer-events-auto lg:bg-transparent;
+    svg {
+      @apply w-full h-full;
+      path {
+        @apply stroke-white lg:stroke-black;
+      
+      }
+    }
+  }
+  .splide__pagination {
+    @apply hidden w-full lg:top-full lg:left-0 lg:flex justify-center items-center gap-5 h-8 pointer-events-none lg:translate-x-1/2 lg:translate-y-12 z-10;
+    li {
+      @apply h-full flex justify-center items-center pointer-events-auto;
+    }
+  }
+  .splide__pagination__page {
+    @apply bg-black w-1 h-1 rounded-full opacity-30;
+    &.is-active {
+      @apply opacity-100;  
+    }
+  }
+}
+.hkn-premiumSimulation-detail {
+  @apply text-center lg:text-left px-8 lg:px-0;
+  & > span {
+    @apply block text-sm font-sans font-black tracking-wider;
+  }
+  h3 {
+    @apply font-gibson font-bold text-3xl lg:text-2xl tracking-wider lg:mt-3 lg:mb-2 xl:mt-4 xl:mb-3;
+  }
+  p {
+    @apply text-xs lg:text-xs xl:text-sm;
+  }
+  hr {
+    @apply border-t-[3px] border-black my-2 xl:my-3;
+    &:last-child {
+      @apply mb-0;
+    }
+  }
+  p:last-of-type {
+    @apply text-center;
+  }
+}
+.hkn-premiumSimulation-detail-basePrice {
+  @apply font-semibold;
+}
+.hkn-premiumSimulation-detail-montylyPrice {
+  @apply font-black text-5xl lg:text-3xl xl:text-4xl;
+}
+.hkn-premiumSimulation-detail-anualPrice {
+  @apply font-semibold text-lg;
 }

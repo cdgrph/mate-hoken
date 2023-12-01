@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MATE. 盗難＆車両保険</title>
     <link rel="stylesheet" href="/style.css">
-    <script src="/main.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/gsb2lwn.css">
   </head>
   <body>
@@ -24,7 +23,7 @@
         <ol>
           <li><a href="#overview">保険概要</a></li>
           <li><a href="#keyPoints">4つのPoint</a></li>
-          <li><a href="#premiums">保険料</a></li>
+          <li><a href="#premiumSimulation">保険料シミュレーション</a></li>
           <li><a href="#coverageDetails">補償内容</a></li>
           <li><a href="#quoteApplication">お見積り＆お申し込み</a></li>
         </ol>
@@ -88,7 +87,129 @@
           </div>
         </div>
       </div>
-      <div id="premiums" class="hkn-premiums"></div>
+      <div id="premiumSimulation" class="hkn-premiumSimulation">
+        <div class="hkn-premiumSimlation-container">
+          <h2 class="hkn-sectionTitle hkn-premiumSimlation-sectionTitle">保険料シミュレーション</h2>
+          <div class="hkn-premiumSimulation-content">
+            <!-- <div> -->
+              <div id="premiumSimulation-splide1" class="hkn-premiumSimulation-splide1 splide" role="group">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <picture>
+                        <source srcset="/premiumSimulation1_2xl.webp" media="(min-width: 1536px)" type="image/webp">
+                        <source srcset="/premiumSimulation1_xl.webp" media="(min-width: 1280px)" type="image/webp">
+                        <source srcset="/premiumSimulation1_lg.webp" media="(min-width: 1024px)" type="image/webp">
+                        <source srcset="/premiumSimulation1_md.webp" media="(min-width: 768px)" type="image/webp">
+                        <source srcset="/premiumSimulation1_sm.webp" media="(min-width: 640px)" type="image/webp">
+                        <img src="/premiumSimulation1.webp" alt="">
+                      </picture>
+                    </li>
+                    <li class="splide__slide">
+                      <picture>
+                        <source srcset="/premiumSimulation2_2xl.webp" media="(min-width: 1536px)" type="image/webp">
+                        <source srcset="/premiumSimulation2_xl.webp" media="(min-width: 1280px)" type="image/webp">
+                        <source srcset="/premiumSimulation2_lg.webp" media="(min-width: 1024px)" type="image/webp">
+                        <source srcset="/premiumSimulation2_md.webp" media="(min-width: 768px)" type="image/webp">
+                        <source srcset="/premiumSimulation2_sm.webp" media="(min-width: 640px)" type="image/webp">
+                        <img src="/premiumSimulation2.webp" alt="">
+                      </picture>
+                    </li>
+                    <li class="splide__slide">
+                      <picture>
+                        <source srcset="/premiumSimulation3_2xl.webp" media="(min-width: 1536px)" type="image/webp">
+                        <source srcset="/premiumSimulation3_xl.webp" media="(min-width: 1280px)" type="image/webp">
+                        <source srcset="/premiumSimulation3_lg.webp" media="(min-width: 1024px)" type="image/webp">
+                        <source srcset="/premiumSimulation3_md.webp" media="(min-width: 768px)" type="image/webp">
+                        <source srcset="/premiumSimulation3_sm.webp" media="(min-width: 640px)" type="image/webp">
+                        <img src="/premiumSimulation3.webp" alt="">
+                      </picture>
+                    </li>
+                  </ul>
+                </div>
+                <div class="splide__arrows"></div>
+              </div>
+            <!-- </div> -->
+            <!-- <div> -->
+              <div id="premiumSimulation-splide2" class="hkn-premiumSimulation-splide2 splide" role="group">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <div>
+                        <div>
+                          <img src="/premiumSimulation-sub1.webp" alt="">
+                        </div>
+                        <div class="hkn-premiumSimulation-detail">
+                          <span>CASE: 01</span>
+                          <hr>
+                          <h3>MATE City</h3>
+                          <p>参考価格：<span class="hkn-premiumSimulation-detail-basePrice">275,000</span>円(税込)<br>
+                            全損 ＋ 半損 ＋ 盗難</p>
+                          <hr>
+                          <p><span class="hkn-premiumSimulation-detail-montylyPrice">1,148</span> 円 /１ヶ月あたり<br>
+                          <span class="hkn-premiumSimulation-detail-anualPrice">13,776</span> 円 / 年間</p>
+                          <hr>
+                        </div>
+                      </div>
+                      <p>※お支払方法は、年間保険料を一括クレジットカード払のみとなります。</p>
+                    </li>
+                    <li class="splide__slide">
+                      <div>
+                        <div>
+                          <img src="/premiumSimulation-sub2.webp" alt="">
+                        </div>
+                        <div class="hkn-premiumSimulation-detail">
+                          <span>CASE: 02</span>
+                          <hr>
+                          <h3>MATE X</h3>
+                          <p>参考価格：<span class="hkn-premiumSimulation-detail-basePrice">374,000</span>円(税込)<br>
+                            全損 ＋ 半損 ＋ 盗難</p>
+                            <hr>
+                          <p><span class="hkn-premiumSimulation-detail-montylyPrice">1,558</span> 円 /１ヶ月あたり<br>
+                            <span class="hkn-premiumSimulation-detail-anualPrice">18,696</span> 円 / 年間</p>
+                          <hr>
+                        </div>
+                      </div>
+                      <p>※お支払方法は、年間保険料を一括クレジットカード払のみとなります。</p>
+                    </li>
+                    <li class="splide__slide">
+                      <div>
+                        <div>
+                          <img src="/premiumSimulation-sub3.webp" alt="">
+                        </div>
+                        <div class="hkn-premiumSimulation-detail">
+                          <span>CASE: 03</span>
+                          <hr>
+                          <h3>MATE Fusion</h3>
+                          <p>参考価格：<span class="hkn-premiumSimulation-detail-basePrice">330,000</span>円(税込)<br>
+                            全損 ＋ 半損 ＋ 盗難</p>
+                          <hr>
+                          <p><span class="hkn-premiumSimulation-detail-montylyPrice">1,353</span> 円 /１ヶ月あたり<br>
+                            <span class="hkn-premiumSimulation-detail-anualPrice">16,236</span> 円 / 年間</p>
+                          <hr>
+                        </div>
+                      </div>
+                      <p>※お支払方法は、年間保険料を一括クレジットカード払のみとなります。</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="splide__arrows">
+                  <button class="splide__arrow splide__arrow--prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" fill="none" viewBox="0 0 8 12">
+                      <path stroke="#282828" stroke-linecap="round" stroke-width="2" d="m6.27 11-5-5M1.27 6l5-5"/>
+                    </svg>
+                  </button>
+                  <button class="splide__arrow splide__arrow--next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" fill="none" viewBox="0 0 8 12">
+                      <path stroke="#282828" stroke-linecap="round" stroke-width="2" d="m1.15 1 5 5M6.15 6l-5 5"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
       <div id="coverageDetails" class="hkn-coverageDetails"></div>
       <div id="quoteApplication" class="hkn-quoteApplication"></div>
       <nav class="hkn-menu--mobile" x-data="{open: false}" @click.outside="open = false" :class="open ? '' : 'closed'">
@@ -97,7 +218,7 @@
           <ol>
             <li><a href="#overview">保険概要</a></li>
             <li><a href="#keyPoints">4つのPoint</a></li>
-            <li><a href="#premiums">保険料</a></li>
+            <li><a href="#premiumSimulation">保険料シミュレーション</a></li>
             <li><a href="#coverageDetails">補償内容</a></li>
             <li><a href="#quoteApplication">お見積り＆お申し込み</a></li>
           </ol>
@@ -105,5 +226,6 @@
         <button class="hkn-menu--mobile-close" @click="open = false"></button>
       </nav>
     </div>
+    <script src="/main.js" type="module"></script>
   </body>
 </html>
