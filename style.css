@@ -308,7 +308,7 @@
   @apply py-32 lg:py-44;
 }
 .hkn-coverageDetails-header {
-  @apply lg:text-white flex flex-col justify-center items-center relative gap-6 aspect-[3/4] lg:aspect-[1280/444] w-full bg-no-repeat bg-contain lg:bg-cover pt-[62.5%] lg:pt-0 
+  @apply lg:text-white flex flex-col justify-center items-center relative gap-6 lg:aspect-[1280/444] w-full bg-no-repeat bg-contain lg:bg-cover pt-[62.5%] lg:pt-0 pb-4 lg:pb-0 
   bg-[url('/coverageDetails.webp')]
     sm:bg-[url('/coverageDetails_sm.webp')]
     md:bg-[url('/coverageDetails_md.webp')]
@@ -335,7 +335,46 @@
       @apply lg:fill-white;
     }
   }
+  & + p {
+    @apply lg:text-right text-xs my-3 px-8 max-w-md lg:max-w-6xl mx-auto;
+  
+  }
+}
+.hkn-coverageDetails-container {
+  @apply lg:mt-16;
 }
 .hkn-coverageDetails-sectionTitle {
-  @apply px-4
+  @apply px-4 mt-16 lg:mt-0;
+}
+.hkn-coverageDetails-content {
+  @apply max-w-md lg:max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 w-full relative mt-8 px-8;
+}
+.hkn-coverageDetails-item {
+  @apply bg-[#fff] p-6 lg:p-8 flex flex-col relative;
+  &:not(:first-child)::before {
+    @apply block w-6 h-6 absolute -top-6 lg:top-1/2 left-1/2 lg:-left-6 -translate-x-1/2 -translate-y-1/2;
+    content: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2221%22%20height%3D%2221%22%20fill%3D%22none%22%20viewBox%3D%220%200%2021%2021%22%3E%20%3Cpath%20stroke%3D%22%23282828%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%223%22%20d%3D%22M1.93%2010.15h17M10.13%2018.75v-17%22%2F%3E%3C%2Fsvg%3E')
+  }
+  h3 {
+    @apply font-bold break-keep text-center text-xl;
+  }
+  img {
+    @apply mx-auto my-2 object-contain w-full aspect-square max-w-[10rem];
+  }
+  p {
+    @apply text-xs text-center my-2;
+  }
+  .hkn-coverageDetails-icon-wrapper {
+    @apply border-t-[3px] border-black relative pt-12 my-2;
+    &::before {
+      @apply absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[1px];
+      content: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2223%22%20height%3D%2234%22%20viewBox%3D%220%200%2023%2034%22%20fill%3D%22none%22%3E%20%3Cpath%20d%3D%22M13.3303%201.89355L13.3303%200.393555L10.3303%200.393555L10.3303%201.89355L13.3303%201.89355ZM10.7697%2032.9542C11.3554%2033.54%2012.3052%2033.54%2012.891%2032.9542L22.4369%2023.4083C23.0227%2022.8225%2023.0227%2021.8727%2022.4369%2021.287C21.8511%2020.7012%2020.9014%2020.7012%2020.3156%2021.287L11.8303%2029.7722L3.34504%2021.287C2.75925%2020.7012%201.80951%2020.7012%201.22372%2021.287C0.637933%2021.8727%200.637933%2022.8225%201.22372%2023.4083L10.7697%2032.9542ZM10.3303%201.89355L10.3303%2031.8936L13.3303%2031.8936L13.3303%201.89355L10.3303%201.89355Z%22%20fill%3D%22%23282828%22%2F%3E%3C%2Fsvg%3E');
+    }
+  }
+  h4 {
+    @apply font-bold text-lg text-center my-3;
+    & ~ p {
+      @apply text-xs text-left my-0 py-4 border-t-[3px] border-black;
+    }
+  } 
 }

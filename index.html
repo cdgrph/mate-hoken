@@ -216,32 +216,49 @@
             <path fill="#282828" d="m307 75.3-.4 2.48h-2.18l-1.13 7.18h-3.07l1.13-7.18h-2.18l.4-2.48H307Zm9.3 0-1.53 9.66h-3.07l.58-3.56h-2.51l-.56 3.56h-3.07l1.53-9.66h3.07l-.55 3.48h2.5l.55-3.48h3.07Zm8.04 0-.4 2.5h-3.56l-.17 1.03h3.36l-.4 2.5h-3.35l-.17 1.1h3.7l-.4 2.53h-6.76l1.53-9.66h6.62Zm7.72 0-.39 2.5h-3.43l-.24 1.47h3.24l-.41 2.51h-3.22l-.5 3.18h-3.06l1.53-9.66h6.48Zm7.79 0-.4 2.48h-2.18l-1.13 7.18h-3.07l1.14-7.18h-2.19l.4-2.48h7.43Z"/>
           </svg>
         </div>
-        <div class="hkn-coverageDetails-container">
-
+        <p>※各補償単独ではお申し込みいただけません。</p>
+        <div class="hkn-coverageDetails-container"> 
           <div class="hkn-coverageDetails-content">
             <div class="hkn-coverageDetails-item">
-              <h3>全損</h3>
-              <p>車両の修理費用が車両の保険金額を超えた場合に、車両の保険金額を支払います。</p>
+              <h3>《 全損 》</h3>
+              <img src="/coverageDetails-illust1.svg" alt="">
+              <p>例）自動車との衝突による全損</p>
+              <div class="hkn-coverageDetails-icon-wrapper">
+                <img src="/coverageDetails-icon1.svg" alt="">
+              </div>
+              <h4>全損補償</h4>
+              <p>自転車が全損になった場合、保険金をお支払いいたします。</p>
+              <p>修理ができない場合<br>
+                修理費が協定保険価額の80%を超える場合</p>
+              <p>※ 交通事故証明書の発行が条件</p>
             </div>
             <div class="hkn-coverageDetails-item">
-              <h3>半損</h3>
-              <p>車両の修理費用が車両の保険金額を超えない場合に、修理費用を支払います。</p>
+              <h3>《 半損 》</h3>
+              <img src="/coverageDetails-illust2.svg" alt="">
+              <p>例）走行中に転倒し半損</p>
+              <div class="hkn-coverageDetails-icon-wrapper">
+                <img src="/coverageDetails-icon1.svg" alt="">
+              </div>
+              <h4>半損補償</h4>
+              <p>自転車が半損になった場合、保険金をお支払いいたします。</p>
+              <p>修理費が協定保険価額の50%を超えて80%以内の場合</p>
+              <p>※ 交通事故証明書の発行が条件</p>
             </div>
             <div class="hkn-coverageDetails-item">
-              <h3>盗難</h3>
-              <p>車両が盗難にあった場合に、車両の保険金額を支払います。</p>
+              <h3>《 盗難 》</h3>
+              <img src="/coverageDetails-illust3.svg" alt="">
+              <p>例）駐輪中の盗難</p>
+              <div class="hkn-coverageDetails-icon-wrapper">
+                <img src="/coverageDetails-icon1.svg" alt="">
+              </div>
+              <h4>盗難補償</h4>
+              <p>盗難・盗難損壊された場合、保険金をお支払いいたします。</p>
+              <p>MATE.が盗まれた場合<br>
+                損壊等が原因で全損になった場合</p>
+              <p>※ 警察署での盗難被害届の受理が条件</p>
             </div>
-            <div class="hkn-coverageDetails-item">
-              <h3>車両保険金額</h3>
-              <p>車両の購入価格を保険金額とします。</p>
-            </div>
-            <div class="hkn-coverageDetails-item">
-              <h3>車両の保険金額の減額</h3>
-              <p>車両の保険金額は、毎年10%ずつ減額されます。</p>
-            </div>
-            <div class="hkn-coverageDetails-item">
-              <h3>車両の保険金額の減額の例</h3>
-              <p>車両の保険金額が100万円の場合、1年後は90万円
+          </div>
+        </div>
       </div>
       <div id="quoteApplication" class="hkn-quoteApplication"></div>
       <nav class="hkn-menu--mobile" x-data="{open: false}" @click.outside="open = false" :class="open ? '' : 'closed'">
