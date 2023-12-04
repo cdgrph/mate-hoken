@@ -7,7 +7,6 @@ window.Alpine = Alpine
 Alpine.plugin(collapse)
 Alpine.start()
 
-
 // Splideのインスタンスを作成
 const splide1 = new Splide('#premiumSimulation-splide1', {
   type: 'loop',
@@ -25,7 +24,6 @@ const splide2 = new Splide('#premiumSimulation-splide2', {
   pagination: true,
   rewind: true,
   autoplay: true,
-
 });
 
 splide2.sync(splide1)
@@ -33,11 +31,20 @@ splide2.sync(splide1)
 splide1.mount();
 splide2.mount();
 
-// // splide2の矢印ボタンにイベントリスナーを追加
-// document.querySelector('#premiumSimulation-splide2 .splide__arrow--prev').addEventListener('click', function() {
-//   splide1.go('<');  // splide1の前のスライドへ移動
-// });
+const splide3 = new Splide('#quoteApplication-splide', {
+  type: 'loop',
+  drag: false,
+  keyboard: false,
+  arrows: true,
+  pagination: false,
+  perMove: 1,
+  perPage: 1,
+  destroy: true,
+  breakpoints: {
+		1024: {
+			destroy: false,
+		},
+  }
+});
 
-// document.querySelector('#premiumSimulation-splide2 .splide__arrow--next').addEventListener('click', function() {
-//   splide1.go('>');  // splide1の次のスライドへ移動
-// });
+splide3.mount();

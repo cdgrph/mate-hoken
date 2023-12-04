@@ -125,7 +125,6 @@
                   </li>
                 </ul>
               </div>
-              <div class="splide__arrows"></div>
             </div>
             <div id="premiumSimulation-splide2" class="hkn-premiumSimulation-splide2 splide" role="group">
               <div class="splide__track">
@@ -296,9 +295,112 @@
               </template>
             </div>
           </div>
+          <div class="hkn-coverageDetails-moreInfo">
+            <a class="hkn-coverageDetails-moreInfo-btn--primary" href="#quoteApplication">お見積り＆申し込みはこちら</a>
+            <h3>※ 詳しい情報はこちら</h3>
+            <a class="hkn-coverageDetails-moreInfo-btn--secondary" href="https://www.n-ssi.co.jp/pdf/bicycle/importance.pdf" target="_blank" rel="noopener">重要事項説明書</a>
+            <a class="hkn-coverageDetails-moreInfo-btn--secondary" href="https://www.n-ssi.co.jp/pdf/bike/agreement.pdf" target="_blank" rel="noopener">ご契約のしおり</a>
+            <h3>【ご注意】</h3>
+            <p>・本表記は、この保険の概要です。詳細については「ご契約のしおり」・「重要事項説明書」をご覧ください。<br>
+              ・この保険は、SBI日本少額短期保険株式会社独自のものであり、損害保険会社、共済事業者、他の少額短期保険業者およびその他の事業者などが取り扱う自転車に関する車両保険等とは引受条件、補償内容、保険金の支払条件などが大きく異なります。</p>
+          </div>
+          <div class="hkn-coverageDetails-faq">
+            <h3>※ よくあるご質問</h3>
+            <div :class="open ? 'hkn-coverageDetails-faq-item--open' : ''" x-data="{open: false}" class="hkn-coverageDetails-faq-item">
+              <h4 @click="open = ! open">パーツ&アクセサリーは補償対象になりますか？</h4>
+              <div x-show="open" x-collapse>
+                <p>加入前に取り付けたパーツ&アクセサリーは補償対象になります。自転車の購入金額にパーツ&アクセサリーの購入金額を合算した額が保険金額となります。<br>
+                  ※ただし、パーツのみ、アクセサリーのみの破損に対しては補償されません。</p>
+              </div>
+            </div>
+            <div :class="open ? 'hkn-coverageDetails-faq-item--open' : ''" x-data="{open: false}" class="hkn-coverageDetails-faq-item">
+              <h4 @click="open = ! open">ホイールだけ、またはサイクルコンピュータだけ盗難にあった場合は補償の対象になりますか？</h4>
+              <div x-show="open" x-collapse>
+                <p>自転車全体が盗難被害にあっていなければ補償対象外となります。</p>
+              </div>
+            </div>
+            <div :class="open ? 'hkn-coverageDetails-faq-item--open' : ''" x-data="{open: false}" class="hkn-coverageDetails-faq-item">
+              <h4 @click="open = ! open">保険料は分割（月払）で支払えますか？</h4>
+              <div x-show="open" x-collapse>
+                <p>一括クレジットカード払のみとなりますので、あらかじめご了承ください。</p>
+              </div>
+            </div>
+            <div :class="open ? 'hkn-coverageDetails-faq-item--open' : ''" x-data="{open: false}" class="hkn-coverageDetails-faq-item">
+              <h4 @click="open = ! open">パーツ&アクセサリーは工賃を含みますか？また一部金額での加入は可能ですか？</h4>
+              <div x-show="open" x-collapse>
+                <p>工賃は含みません。 また、一部金額での加入はできません。パーツ&アクセサリーの購入金額全額が保険金額に算入されます。</p>
+              </div>
+            </div>
+            <div :class="open ? 'hkn-coverageDetails-faq-item--open' : ''" x-data="{open: false}" class="hkn-coverageDetails-faq-item">
+              <h4 @click="open = ! open">更新手続きはどうすればいいでしょうか？</h4>
+              <div x-show="open" x-collapse>
+                <p>自動更新です。保険契約満了後に、同じ契約内容で自動更新されます。 更新をご希望されない場合は、満期日の1週間前までに、異動解約センターまでご連絡ください。 移動解約センター：0120-071-161 受付時間：平日（月～金）9:00-17:00（土・日・祝日・年末年始はお休みをいただいております。）</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div id="quoteApplication" class="hkn-quoteApplication"></div>
+      <div id="quoteApplication" class="hkn-quoteApplication">
+        <div class="hkn-quoteApplication-container">
+          <div class="hkn-quoteApplication-header">
+            <h2 class="hkn-sectionTitle hkn-quoteApplication-sectionTitle">お見積り＆お申し込み</h2>
+            <p>下記のご利用店舗をご選択後、お見積もり&お申し込みいただけます。<br>
+              ※お見積もりは個人情報不要、10秒で完了いたしますのでお気軽にご利用ください。</p>
+          </div>
+          <div class="hkn-quoteApplication-content">
+            <div id="quoteApplication-splide" class="hkn-quoteApplication-splide splide" role="group">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <div class="hkn-quoteApplication-item hkn-quoteApplication-item--tokyo">
+                      <h3>TOKYO</h3>
+                      <a class="hkn-quoteApplication-item-btn" href="">お見積もり&お申し込み</a>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="hkn-quoteApplication-item hkn-quoteApplication-item--osaka">
+                      <h3>OSAKA</h3>
+                      <a class="hkn-quoteApplication-item-btn" href="">お見積もり&お申し込み</a>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="hkn-quoteApplication-item hkn-quoteApplication-item--webSite">
+                      <h3>OFFICIAL WEB SITE</h3>
+                      <a class="hkn-quoteApplication-item-btn" href="">お見積もり&お申し込み</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" fill="none" viewBox="0 0 8 12">
+                    <path stroke="#282828" stroke-linecap="round" stroke-width="2" d="m6.27 11-5-5M1.27 6l5-5"/>
+                  </svg>
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" fill="none" viewBox="0 0 8 12">
+                    <path stroke="#282828" stroke-linecap="round" stroke-width="2" d="m1.15 1 5 5M6.15 6l-5 5"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <p>※直営店以外でMATE.BIKEを購入された方は、<br>
+              「OFFICIAL WEB SITE」をお選びください。</p>
+            <div class="hkn-quoteApplication-note">
+              <p>「MATE.盗難&車両保険」はSBI日本少額短期保険株式会社が販売する自転車専用車両保険（正式名称：車両専用保険）です。</p>
+              <p>【募集代理店】株式会社MATE.BIKE JAPAN <br>
+                【引受少額短期保険業者】SBI日本少額短期保険株式会社<br>
+                株式会社MATE.BIKE JAPANは、SBI日本少額短期保険株式会社の保険募集代理店として保険契約締結の媒介を行っており、締結代理権および告知受領権は有しておりません。</p>
+              <p>【ご契約に関するお問い合わせ】<br>
+                SBI日本少額短期保険株式会社<br>
+                カスタマーセンター<br>
+                ・0120-080-828 バイク/自転車保険（ガイダンス２）<br>
+                ・受付時間：全日9：00～17：00（年末年始はお休みをいただいております。）</p>
+            </div>
+            <p>NS2023-082-001(2311)</p>
+          </div>
+        </div>
+      </div>
       <nav class="hkn-menu--mobile" x-data="{open: false}" @click.outside="open = false" :class="open ? '' : 'closed'">
         <button class="hkn-menu--mobile-toggle" @click="open = ! open">MENU</button>
         <div>
