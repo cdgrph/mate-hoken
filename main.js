@@ -1,5 +1,12 @@
 import '@splidejs/splide/css/core';
 import Splide from '@splidejs/splide';
+import Alpine from 'alpinejs'
+import collapse from '@alpinejs/collapse'
+ 
+window.Alpine = Alpine
+Alpine.plugin(collapse)
+Alpine.start()
+
 
 // Splideのインスタンスを作成
 const splide1 = new Splide('#premiumSimulation-splide1', {

@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MATE. 盗難＆車両保険</title>
     <link rel="stylesheet" href="/style.css">
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="/main.js" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
@@ -219,43 +218,82 @@
         <p>※各補償単独ではお申し込みいただけません。</p>
         <div class="hkn-coverageDetails-container"> 
           <div class="hkn-coverageDetails-content">
-            <div class="hkn-coverageDetails-item">
+            <div class="hkn-coverageDetails-item" x-data="{open : false, enabled: window.innerWidth < 1024}" x-init="() => {
+              window.addEventListener('resize', () => {
+                if (window.innerWidth < 1024) {
+                  enabled = true;
+                } else {
+                  enabled = false;
+                }
+              });
+            }">
               <h3>《 全損 》</h3>
               <img src="/coverageDetails-illust1.svg" alt="">
               <p>例）自動車との衝突による全損</p>
-              <div class="hkn-coverageDetails-icon-wrapper">
-                <img src="/coverageDetails-icon1.svg" alt="">
+              <div x-show="open || ! enabled" x-collapse>
+                <div class="hkn-coverageDetails-icon-wrapper">
+                  <img src="/coverageDetails-icon1.svg" alt="">
+                </div>
+                <h4>全損補償</h4>
+                <p>自転車が全損になった場合、保険金をお支払いいたします。</p>
+                <p>修理ができない場合<br>
+                  修理費が協定保険価額の80%を超える場合</p>
+                <p>※ 交通事故証明書の発行が条件</p>
               </div>
-              <h4>全損補償</h4>
-              <p>自転車が全損になった場合、保険金をお支払いいたします。</p>
-              <p>修理ができない場合<br>
-                修理費が協定保険価額の80%を超える場合</p>
-              <p>※ 交通事故証明書の発行が条件</p>
+              <template x-if="enabled">
+                <button x-text="open ? '詳細を閉じる' : '詳細'" @click="open = ! open"></button>
+              </template>
             </div>
-            <div class="hkn-coverageDetails-item">
+            <div class="hkn-coverageDetails-item" x-data="{open : false, enabled: window.innerWidth < 1024}" x-init="() => {
+              window.addEventListener('resize', () => {
+                if (window.innerWidth < 1024) {
+                  enabled = true;
+                } else {
+                  enabled = false;
+                }
+              });
+            }">
               <h3>《 半損 》</h3>
               <img src="/coverageDetails-illust2.svg" alt="">
               <p>例）走行中に転倒し半損</p>
-              <div class="hkn-coverageDetails-icon-wrapper">
-                <img src="/coverageDetails-icon1.svg" alt="">
+              <div x-show="open || ! enabled" x-collapse>
+                <div class="hkn-coverageDetails-icon-wrapper">
+                  <img src="/coverageDetails-icon1.svg" alt="">
+                </div>
+                <h4>半損補償</h4>
+                <p>自転車が半損になった場合、保険金をお支払いいたします。</p>
+                <p>修理費が協定保険価額の50%を超えて80%以内の場合</p>
+                <p>※ 交通事故証明書の発行が条件</p>
               </div>
-              <h4>半損補償</h4>
-              <p>自転車が半損になった場合、保険金をお支払いいたします。</p>
-              <p>修理費が協定保険価額の50%を超えて80%以内の場合</p>
-              <p>※ 交通事故証明書の発行が条件</p>
+              <template x-if="enabled">
+                <button x-text="open ? '詳細を閉じる' : '詳細'" @click="open = ! open"></button>
+              </template>
             </div>
-            <div class="hkn-coverageDetails-item">
+            <div class="hkn-coverageDetails-item" x-data="{open : false, enabled: window.innerWidth < 1024}" x-init="() => {
+              window.addEventListener('resize', () => {
+                if (window.innerWidth < 1024) {
+                  enabled = true;
+                } else {
+                  enabled = false;
+                }
+              });
+            }">
               <h3>《 盗難 》</h3>
               <img src="/coverageDetails-illust3.svg" alt="">
               <p>例）駐輪中の盗難</p>
-              <div class="hkn-coverageDetails-icon-wrapper">
-                <img src="/coverageDetails-icon1.svg" alt="">
+              <div x-show="open || ! enabled" x-collapse>
+                <div class="hkn-coverageDetails-icon-wrapper">
+                  <img src="/coverageDetails-icon1.svg" alt="">
+                </div>
+                <h4>盗難補償</h4>
+                <p>盗難・盗難損壊された場合、保険金をお支払いいたします。</p>
+                <p>MATE.が盗まれた場合<br>
+                  損壊等が原因で全損になった場合</p>
+                <p>※ 警察署での盗難被害届の受理が条件</p>
               </div>
-              <h4>盗難補償</h4>
-              <p>盗難・盗難損壊された場合、保険金をお支払いいたします。</p>
-              <p>MATE.が盗まれた場合<br>
-                損壊等が原因で全損になった場合</p>
-              <p>※ 警察署での盗難被害届の受理が条件</p>
+              <template x-if="enabled">
+                <button x-text="open ? '詳細を閉じる' : '詳細'" @click="open = ! open"></button>
+              </template>
             </div>
           </div>
         </div>
@@ -275,6 +313,6 @@
         <button class="hkn-menu--mobile-close" @click="open = false"></button>
       </nav>
     </div>
-    <script src="/main.js" type="module"></script>
+    
   </body>
 </html>
