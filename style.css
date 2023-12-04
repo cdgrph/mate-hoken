@@ -472,8 +472,7 @@
     @apply absolute top-1/2 left-0 w-full flex justify-between items-center pointer-events-none -translate-y-1/2 z-10;
   }
   .splide__arrow {
-    @apply w-8 h-8 rounded-full p-2.5 pointer-events-auto bg-[rgba(0,0,0,.3)];
-    
+    @apply w-8 h-8 rounded-full p-2.5 pointer-events-auto bg-[rgba(0,0,0,.3)] lg:hidden;
     svg {
       @apply w-full h-full;
       path {
