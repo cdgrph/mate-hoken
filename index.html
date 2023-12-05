@@ -4,13 +4,417 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>MATE. 盗難＆車両保険</title>
     <link rel="stylesheet" href="/style.css">
-    <script src="/main.js"></script>
+    <script src="/main.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/gsb2lwn.css">
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div class="hkn">
+      <div class="hkn-top">
+        <h1 class="hkn-pageTitle">MATE. 盗難＆車両保険</h1>
+        <img src="/title.svg" alt="">
+      </div>
+      <nav class="hkn-menu">
+        <ol>
+          <li><a href="#overview">保険概要</a></li>
+          <li><a href="#keyPoints">4つのPoint</a></li>
+          <li><a href="#premiumSimulation">保険料シミュレーション</a></li>
+          <li><a href="#coverageDetails">補償内容</a></li>
+          <li><a href="#quoteApplication">お見積り＆お申し込み</a></li>
+        </ol>
+      </nav>
+      <div id="overview" class="hkn-overview">
+        <div class="hkn-overview-container">
+          <picture>
+            <source srcset="/overview_lg.webp" media="(min-width: 1024px)" type="image/webp">
+            <img class="hkn-overview-photo" src="/overview.webp" alt="">
+          </picture>
+          <div class="hkn-overview-content">
+            <h2 class="hkn-sectionTitle">あなたのMATE.ライフを<wbr>守ります</h2>
+            <p>車体の破損および盗難を補償する「MATE.BIKEオーナー」専用の盗難&車両保険です。<br>
+              破損、もしくは盗難にあった場合に購入価格を補償します。(全損・盗難の場合)</p>
+          </div>
+        </div>
+      </div>
+      <div id="keyPoints" class="hkn-keyPoints">
+        <div class="hkn-keyPoints-container">
+          <div>
+            <picture>
+              <source srcset="/keyPoints_xl.webp" media="(min-width: 1280px)" type="image/webp">
+              <source srcset="/keyPoints_lg.webp" media="(min-width: 1024px)" type="image/webp">
+              <source srcset="/keyPoints_md.webp" media="(min-width: 768px)" type="image/webp">
+              <source srcset="/keyPoints_sm.webp" media="(min-width: 640px)" type="image/webp">
+              <img class="hkn-keyPoints-photo" src="/keyPoints.webp" alt="">
+            </picture>
+          </div>
+          <div class="hkn-keyPoints-content">
+            <h2 class="hkn-sectionTitle hkn-keyPoints-sectionTitle">4つのPoint</h2>
+            <ol class="hkn-keyPoints-list">
+              <li class="hkn-keyPoints-item">
+                <div>
+                  <h3>購入時期に関わらずいつでも<wbr>加入が可能</h3>
+                </div>
+              </li>
+              <li class="hkn-keyPoints-item">
+                <div>
+                  <h3>中古車でも加入可能</h3>
+                </div>
+              </li>
+              <li class="hkn-keyPoints-item">
+                <div>
+                  <h3>更新後も補償額は契約時のまま</h3>
+                  <p>※１年更新</p>
+                </div>
+              </li>
+              <li class="hkn-keyPoints-item">
+                <div>
+                  <h3>パーツやアクセサリーも対象</h3>
+                </div>
+              </li>
+            </ol>
+            <div class="hkn-keyPoints-detail">
+              <p>購入時に付けたパーツやアクセサリーも補償対象となります。<br>
+                例：純正フロントライト、リアライト、フェンダー</p>
+              <p>※補償対象となるパーツ&アクセサリーは、車両に定着あるいは装備されているものとします。<br>
+                ・定着：ボルト/ナット/ねじ等で固定されており、工具等を使用しなければ容易に取り外せない状態をいいます。<br>
+                ・装備：車両の機能を十分に発揮させるために備品として備えつけられている状態または法令に従い車両に備えつけられている状態をいいます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="premiumSimulation" class="hkn-premiumSimulation">
+        <div class="hkn-premiumSimlation-container">
+          <h2 class="hkn-sectionTitle hkn-premiumSimlation-sectionTitle">保険料シミュレーション</h2>
+          <div class="hkn-premiumSimulation-content">
+            <div id="premiumSimulation-splide1" class="hkn-premiumSimulation-splide1 splide" role="group">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <picture>
+                      <source srcset="/premiumSimulation1_2xl.webp" media="(min-width: 1536px)" type="image/webp">
+                      <source srcset="/premiumSimulation1_xl.webp" media="(min-width: 1280px)" type="image/webp">
+                      <source srcset="/premiumSimulation1_lg.webp" media="(min-width: 1024px)" type="image/webp">
+                      <source srcset="/premiumSimulation1_md.webp" media="(min-width: 768px)" type="image/webp">
+                      <source srcset="/premiumSimulation1_sm.webp" media="(min-width: 640px)" type="image/webp">
+                      <img src="/premiumSimulation1.webp" alt="">
+                    </picture>
+                  </li>
+                  <li class="splide__slide">
+                    <picture>
+                      <source srcset="/premiumSimulation2_2xl.webp" media="(min-width: 1536px)" type="image/webp">
+                      <source srcset="/premiumSimulation2_xl.webp" media="(min-width: 1280px)" type="image/webp">
+                      <source srcset="/premiumSimulation2_lg.webp" media="(min-width: 1024px)" type="image/webp">
+                      <source srcset="/premiumSimulation2_md.webp" media="(min-width: 768px)" type="image/webp">
+                      <source srcset="/premiumSimulation2_sm.webp" media="(min-width: 640px)" type="image/webp">
+                      <img src="/premiumSimulation2.webp" alt="">
+                    </picture>
+                  </li>
+                  <li class="splide__slide">
+                    <picture>
+                      <source srcset="/premiumSimulation3_2xl.webp" media="(min-width: 1536px)" type="image/webp">
+                      <source srcset="/premiumSimulation3_xl.webp" media="(min-width: 1280px)" type="image/webp">
+                      <source srcset="/premiumSimulation3_lg.webp" media="(min-width: 1024px)" type="image/webp">
+                      <source srcset="/premiumSimulation3_md.webp" media="(min-width: 768px)" type="image/webp">
+                      <source srcset="/premiumSimulation3_sm.webp" media="(min-width: 640px)" type="image/webp">
+                      <img src="/premiumSimulation3.webp" alt="">
+                    </picture>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="premiumSimulation-splide2" class="hkn-premiumSimulation-splide2 splide" role="group">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <div>
+                      <div>
+                        <img src="/premiumSimulation-sub1.webp" alt="">
+                      </div>
+                      <div class="hkn-premiumSimulation-detail">
+                        <span>CASE: 01</span>
+                        <hr>
+                        <h3>MATE City</h3>
+                        <p>参考価格：<span class="hkn-premiumSimulation-detail-basePrice">275,000</span>円(税込)<br>
+                          全損 ＋ 半損 ＋ 盗難</p>
+                        <hr>
+                        <p><span class="hkn-premiumSimulation-detail-montylyPrice">1,148</span> 円 /１ヶ月あたり<br>
+                        <span class="hkn-premiumSimulation-detail-anualPrice">13,776</span> 円 / 年間</p>
+                        <hr>
+                      </div>
+                    </div>
+                    <p>※お支払方法は、年間保険料を一括クレジットカード払のみとなります。</p>
+                  </li>
+                  <li class="splide__slide">
+                    <div>
+                      <div>
+                        <img src="/premiumSimulation-sub2.webp" alt="">
+                      </div>
+                      <div class="hkn-premiumSimulation-detail">
+                        <span>CASE: 02</span>
+                        <hr>
+                        <h3>MATE X</h3>
+                        <p>参考価格：<span class="hkn-premiumSimulation-detail-basePrice">374,000</span>円(税込)<br>
+                          全損 ＋ 半損 ＋ 盗難</p>
+                          <hr>
+                        <p><span class="hkn-premiumSimulation-detail-montylyPrice">1,558</span> 円 /１ヶ月あたり<br>
+                          <span class="hkn-premiumSimulation-detail-anualPrice">18,696</span> 円 / 年間</p>
+                        <hr>
+                      </div>
+                    </div>
+                    <p>※お支払方法は、年間保険料を一括クレジットカード払のみとなります。</p>
+                  </li>
+                  <li class="splide__slide">
+                    <div>
+                      <div>
+                        <img src="/premiumSimulation-sub3.webp" alt="">
+                      </div>
+                      <div class="hkn-premiumSimulation-detail">
+                        <span>CASE: 03</span>
+                        <hr>
+                        <h3>MATE Fusion</h3>
+                        <p>参考価格：<span class="hkn-premiumSimulation-detail-basePrice">330,000</span>円(税込)<br>
+                          全損 ＋ 半損 ＋ 盗難</p>
+                        <hr>
+                        <p><span class="hkn-premiumSimulation-detail-montylyPrice">1,353</span> 円 /１ヶ月あたり<br>
+                          <span class="hkn-premiumSimulation-detail-anualPrice">16,236</span> 円 / 年間</p>
+                        <hr>
+                      </div>
+                    </div>
+                    <p>※お支払方法は、年間保険料を一括クレジットカード払のみとなります。</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" fill="none" viewBox="0 0 8 12">
+                    <path stroke="#282828" stroke-linecap="round" stroke-width="2" d="m6.27 11-5-5M1.27 6l5-5"/>
+                  </svg>
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" fill="none" viewBox="0 0 8 12">
+                    <path stroke="#282828" stroke-linecap="round" stroke-width="2" d="m1.15 1 5 5M6.15 6l-5 5"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="coverageDetails" class="hkn-coverageDetails">
+        <div class="hkn-coverageDetails-header">
+          <h2 class="hkn-sectionTitle hkn-coverageDetails-sectionTitle">3つの安心補償がセット</h2>
+          <svg xmlns="http://www.w3.org/2000/svg" width="400" height="164" fill="none" viewBox="0 0 400 164">
+            <path fill="#282828" d="M72.98 162.72C28.3 158.02-4.23 117.85.45 73.15 5.15 28.47 45.33-4.08 90.02.62a80.7 80.7 0 0 1 56.26 31.64 7.83 7.83 0 0 1-12.44 9.5A65.25 65.25 0 0 0 88.4 16.17a65.91 65.91 0 0 0-72.37 58.6 65.9 65.9 0 0 0 58.6 72.37 65.9 65.9 0 0 0 71.03-80.36 7.81 7.81 0 1 1 15.25-3.53 81.4 81.4 0 0 1 1.66 26.93c-4.69 44.68-44.87 77.23-89.56 72.53h-.02Z"/>
+            <path fill="#282828" d="M191.48 162.72c-44.69-4.7-77.23-44.87-72.53-89.57C123.64 28.47 163.82-4.08 208.5.62a80.7 80.7 0 0 1 56.27 31.64 7.82 7.82 0 0 1-12.44 9.5 65.26 65.26 0 0 0-45.46-25.58 65.91 65.91 0 0 0-72.36 58.6 65.9 65.9 0 0 0 58.6 72.37 65.9 65.9 0 0 0 71.03-80.36 7.81 7.81 0 1 1 15.25-3.53 81.38 81.38 0 0 1 1.66 26.93c-4.7 44.68-44.87 77.23-89.57 72.53h-.01Z"/>
+            <path fill="#282828" d="M309.98 162.72c-44.7-4.7-77.23-44.87-72.54-89.57 4.7-44.68 44.87-77.23 89.57-72.53a80.7 80.7 0 0 1 56.26 31.64 7.83 7.83 0 0 1-12.44 9.5 65.25 65.25 0 0 0-45.45-25.58A65.91 65.91 0 0 0 253 74.78a65.9 65.9 0 0 0 58.61 72.37 65.9 65.9 0 0 0 71.02-80.36 7.81 7.81 0 1 1 15.25-3.53 81.4 81.4 0 0 1 1.66 26.93c-4.69 44.68-44.87 77.23-89.56 72.53h-.01ZM69.82 70.94l-.4 2.48h-2.18l-1.13 7.18h-3.07l1.14-7.18h-2.19l.4-2.48h7.43Zm9.3 3.85c0 3.49-2.43 5.98-5.91 5.98-2.5 0-4.34-1.4-4.34-4a5.72 5.72 0 0 1 5.92-5.98c2.5 0 4.34 1.4 4.34 4Zm-3.1.44c0-1.03-.6-1.75-1.65-1.75-1.47 0-2.37 1.35-2.37 2.73 0 1.02.6 1.75 1.66 1.75 1.47 0 2.36-1.36 2.36-2.73Zm11.1-4.29-.4 2.48h-2.18L83.4 80.6h-3.07l1.13-7.18H79.3l.4-2.48h7.43Zm7.46 9.66h-3.33l-.14-1.36H88.5l-.57 1.36h-3.2l4.77-9.66h3.39l1.7 9.66Zm-3.72-3.8-.28-2.51-1.06 2.52h1.34ZM101.8 78l-.4 2.6h-6.22l1.52-9.66h3.06L98.64 78h3.16ZM72.31 94l-.4 2.6h-6.22l1.52-9.66h3.06L69.15 94h3.16Zm10.41-3.2c0 3.48-2.43 5.97-5.92 5.97-2.49 0-4.34-1.4-4.34-4a5.72 5.72 0 0 1 5.92-5.98c2.51 0 4.34 1.4 4.34 4Zm-3.1.43c0-1.03-.6-1.75-1.66-1.75-1.47 0-2.36 1.35-2.36 2.73 0 1.02.6 1.75 1.65 1.75 1.47 0 2.37-1.36 2.37-2.73Zm9.78-.97a3.7 3.7 0 0 0-2.14-.92c-.21 0-.71.05-.71.37 0 .73 3.62.62 3.62 3.17s-2.22 3.89-4.55 3.89a5.15 5.15 0 0 1-3.39-1.3l1.75-2.4a3.8 3.8 0 0 0 2.33 1.05c.2 0 .71-.05.71-.37 0-.84-3.6-.54-3.6-3.14 0-2.5 2.05-3.78 4.37-3.78 1.01 0 2.4.46 3.12 1.16l-1.5 2.27Zm7.6 0a3.7 3.7 0 0 0-2.14-.92c-.2 0-.71.05-.71.37 0 .73 3.62.62 3.62 3.17s-2.22 3.89-4.55 3.89a5.15 5.15 0 0 1-3.38-1.3l1.75-2.4a3.8 3.8 0 0 0 2.32 1.05c.2 0 .71-.05.71-.37 0-.84-3.6-.54-3.6-3.14 0-2.5 2.05-3.78 4.37-3.78 1.01 0 2.4.46 3.13 1.16L97 90.26ZM193.62 70.94l-1.54 9.66H189l.58-3.55h-2.51l-.56 3.55h-3.07l1.53-9.66h3.06l-.54 3.49h2.5l.55-3.49h3.07Zm8.86 9.66h-3.33l-.14-1.36h-2.62l-.58 1.36h-3.19l4.76-9.66h3.39l1.7 9.66Zm-3.73-3.8-.28-2.51-1.06 2.52h1.34ZM209.7 78l-.4 2.6h-6.22l1.53-9.66h3.05L206.53 78h3.16Zm8.44-7.06-.39 2.5h-3.43l-.24 1.48h3.24l-.4 2.5h-3.23l-.5 3.18h-3.05l1.52-9.66h6.48ZM190.95 94l-.4 2.6h-6.22l1.52-9.66h3.06L187.79 94h3.16Zm10.41-3.2c0 3.48-2.43 5.97-5.92 5.97-2.49 0-4.34-1.4-4.34-4a5.72 5.72 0 0 1 5.92-5.98c2.51 0 4.34 1.4 4.34 4Zm-3.1.43c0-1.03-.6-1.75-1.66-1.75-1.47 0-2.36 1.35-2.36 2.73 0 1.02.6 1.75 1.65 1.75 1.47 0 2.37-1.36 2.37-2.73Zm9.78-.97a3.7 3.7 0 0 0-2.14-.92c-.21 0-.72.05-.72.37 0 .73 3.63.62 3.63 3.17s-2.22 3.89-4.55 3.89a5.15 5.15 0 0 1-3.39-1.3l1.75-2.4a3.8 3.8 0 0 0 2.33 1.05c.2 0 .71-.05.71-.37 0-.84-3.6-.54-3.6-3.14 0-2.5 2.05-3.78 4.37-3.78 1 0 2.4.46 3.12 1.16l-1.5 2.27Zm7.6 0a3.7 3.7 0 0 0-2.14-.92c-.21 0-.71.05-.71.37 0 .73 3.62.62 3.62 3.17s-2.22 3.89-4.55 3.89a5.15 5.15 0 0 1-3.39-1.3l1.75-2.4a3.8 3.8 0 0 0 2.33 1.05c.2 0 .71-.05.71-.37 0-.84-3.6-.54-3.6-3.14 0-2.5 2.05-3.78 4.37-3.78 1.01 0 2.4.46 3.12 1.16l-1.5 2.27Z"/>
+            <path fill="#282828" d="m307 75.3-.4 2.48h-2.18l-1.13 7.18h-3.07l1.13-7.18h-2.18l.4-2.48H307Zm9.3 0-1.53 9.66h-3.07l.58-3.56h-2.51l-.56 3.56h-3.07l1.53-9.66h3.07l-.55 3.48h2.5l.55-3.48h3.07Zm8.04 0-.4 2.5h-3.56l-.17 1.03h3.36l-.4 2.5h-3.35l-.17 1.1h3.7l-.4 2.53h-6.76l1.53-9.66h6.62Zm7.72 0-.39 2.5h-3.43l-.24 1.47h3.24l-.41 2.51h-3.22l-.5 3.18h-3.06l1.53-9.66h6.48Zm7.79 0-.4 2.48h-2.18l-1.13 7.18h-3.07l1.14-7.18h-2.19l.4-2.48h7.43Z"/>
+          </svg>
+        </div>
+        <p>※各補償単独ではお申し込みいただけません。</p>
+        <div class="hkn-coverageDetails-container"> 
+          <div class="hkn-coverageDetails-content">
+            <div class="hkn-coverageDetails-item" x-data="{open : false, enabled: window.innerWidth < 1024}" x-init="() => {
+              window.addEventListener('resize', () => {
+                if (window.innerWidth < 1024) {
+                  enabled = true;
+                } else {
+                  enabled = false;
+                }
+              });
+            }">
+              <h3>《 全損 》</h3>
+              <img src="/coverageDetails-illust1.svg" alt="">
+              <p>例）自動車との衝突による全損</p>
+              <div x-show="open || ! enabled" x-collapse>
+                <div class="hkn-coverageDetails-icon-wrapper">
+                  <img src="/coverageDetails-icon1.svg" alt="">
+                </div>
+                <h4>全損補償</h4>
+                <p>自転車が全損になった場合、保険金をお支払いいたします。</p>
+                <p>修理ができない場合<br>
+                  修理費が協定保険価額の80%を超える場合</p>
+                <p>※ 交通事故証明書の発行が条件</p>
+              </div>
+              <template x-if="enabled">
+                <button x-text="open ? '詳細を閉じる' : '詳細'" @click="open = ! open"></button>
+              </template>
+            </div>
+            <div class="hkn-coverageDetails-item" x-data="{open : false, enabled: window.innerWidth < 1024}" x-init="() => {
+              window.addEventListener('resize', () => {
+                if (window.innerWidth < 1024) {
+                  enabled = true;
+                } else {
+                  enabled = false;
+                }
+              });
+            }">
+              <h3>《 半損 》</h3>
+              <img src="/coverageDetails-illust2.svg" alt="">
+              <p>例）走行中に転倒し半損</p>
+              <div x-show="open || ! enabled" x-collapse>
+                <div class="hkn-coverageDetails-icon-wrapper">
+                  <img src="/coverageDetails-icon1.svg" alt="">
+                </div>
+                <h4>半損補償</h4>
+                <p>自転車が半損になった場合、保険金をお支払いいたします。</p>
+                <p>修理費が協定保険価額の50%を超えて80%以内の場合</p>
+                <p>※ 交通事故証明書の発行が条件</p>
+              </div>
+              <template x-if="enabled">
+                <button x-text="open ? '詳細を閉じる' : '詳細'" @click="open = ! open"></button>
+              </template>
+            </div>
+            <div class="hkn-coverageDetails-item" x-data="{open : false, enabled: window.innerWidth < 1024}" x-init="() => {
+              window.addEventListener('resize', () => {
+                if (window.innerWidth < 1024) {
+                  enabled = true;
+                } else {
+                  enabled = false;
+                }
+              });
+            }">
+              <h3>《 盗難 》</h3>
+              <img src="/coverageDetails-illust3.svg" alt="">
+              <p>例）駐輪中の盗難</p>
+              <div x-show="open || ! enabled" x-collapse>
+                <div class="hkn-coverageDetails-icon-wrapper">
+                  <img src="/coverageDetails-icon1.svg" alt="">
+                </div>
+                <h4>盗難補償</h4>
+                <p>盗難・盗難損壊された場合、保険金をお支払いいたします。</p>
+                <p>MATE.が盗まれた場合<br>
+                  損壊等が原因で全損になった場合</p>
+                <p>※ 警察署での盗難被害届の受理が条件</p>
+              </div>
+              <template x-if="enabled">
+                <button x-text="open ? '詳細を閉じる' : '詳細'" @click="open = ! open"></button>
+              </template>
+            </div>
+          </div>
+          <div class="hkn-coverageDetails-moreInfo">
+            <a class="hkn-coverageDetails-moreInfo-btn--primary" href="#quoteApplication">お見積り＆申し込みはこちら</a>
+            <h3>※ 詳しい情報はこちら</h3>
+            <a class="hkn-coverageDetails-moreInfo-btn--secondary" href="https://www.n-ssi.co.jp/pdf/bicycle/importance.pdf" target="_blank" rel="noopener">重要事項説明書</a>
+            <a class="hkn-coverageDetails-moreInfo-btn--secondary" href="https://www.n-ssi.co.jp/pdf/bike/agreement.pdf" target="_blank" rel="noopener">ご契約のしおり</a>
+            <h3>【ご注意】</h3>
+            <p>・本表記は、この保険の概要です。詳細については「ご契約のしおり」・「重要事項説明書」をご覧ください。<br>
+              ・この保険は、SBI日本少額短期保険株式会社独自のものであり、損害保険会社、共済事業者、他の少額短期保険業者およびその他の事業者などが取り扱う自転車に関する車両保険等とは引受条件、補償内容、保険金の支払条件などが大きく異なります。</p>
+          </div>
+          <div class="hkn-coverageDetails-faq">
+            <h3>※ よくあるご質問</h3>
+            <div :class="open ? 'hkn-coverageDetails-faq-item--open' : ''" x-data="{open: false}" class="hkn-coverageDetails-faq-item">
+              <h4 @click="open = ! open">パーツ&アクセサリーは補償対象になりますか？</h4>
+              <div x-show="open" x-collapse>
+                <p>加入前に取り付けたパーツ&アクセサリーは補償対象になります。自転車の購入金額にパーツ&アクセサリーの購入金額を合算した額が保険金額となります。<br>
+                  ※ただし、パーツのみ、アクセサリーのみの破損に対しては補償されません。</p>
+              </div>
+            </div>
+            <div :class="open ? 'hkn-coverageDetails-faq-item--open' : ''" x-data="{open: false}" class="hkn-coverageDetails-faq-item">
+              <h4 @click="open = ! open">ホイールだけ、またはサイクルコンピュータだけ盗難にあった場合は補償の対象になりますか？</h4>
+              <div x-show="open" x-collapse>
+                <p>自転車全体が盗難被害にあっていなければ補償対象外となります。</p>
+              </div>
+            </div>
+            <div :class="open ? 'hkn-coverageDetails-faq-item--open' : ''" x-data="{open: false}" class="hkn-coverageDetails-faq-item">
+              <h4 @click="open = ! open">保険料は分割（月払）で支払えますか？</h4>
+              <div x-show="open" x-collapse>
+                <p>一括クレジットカード払のみとなりますので、あらかじめご了承ください。</p>
+              </div>
+            </div>
+            <div :class="open ? 'hkn-coverageDetails-faq-item--open' : ''" x-data="{open: false}" class="hkn-coverageDetails-faq-item">
+              <h4 @click="open = ! open">パーツ&アクセサリーは工賃を含みますか？また一部金額での加入は可能ですか？</h4>
+              <div x-show="open" x-collapse>
+                <p>工賃は含みません。 また、一部金額での加入はできません。パーツ&アクセサリーの購入金額全額が保険金額に算入されます。</p>
+              </div>
+            </div>
+            <div :class="open ? 'hkn-coverageDetails-faq-item--open' : ''" x-data="{open: false}" class="hkn-coverageDetails-faq-item">
+              <h4 @click="open = ! open">更新手続きはどうすればいいでしょうか？</h4>
+              <div x-show="open" x-collapse>
+                <p>自動更新です。保険契約満了後に、同じ契約内容で自動更新されます。 更新をご希望されない場合は、満期日の1週間前までに、異動解約センターまでご連絡ください。 移動解約センター：0120-071-161 受付時間：平日（月～金）9:00-17:00（土・日・祝日・年末年始はお休みをいただいております。）</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="quoteApplication" class="hkn-quoteApplication">
+        <div class="hkn-quoteApplication-container">
+          <div class="hkn-quoteApplication-header">
+            <h2 class="hkn-sectionTitle hkn-quoteApplication-sectionTitle">お見積り＆お申し込み</h2>
+            <p>下記のご利用店舗をご選択後、お見積もり&お申し込みいただけます。<br>
+              ※お見積もりは個人情報不要、10秒で完了いたしますのでお気軽にご利用ください。</p>
+          </div>
+          <div class="hkn-quoteApplication-content">
+            <div id="quoteApplication-splide" class="hkn-quoteApplication-splide splide" role="group">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <div class="hkn-quoteApplication-item hkn-quoteApplication-item--tokyo">
+                      <h3>TOKYO</h3>
+                      <a class="hkn-quoteApplication-item-btn" href="">お見積もり&お申し込み</a>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="hkn-quoteApplication-item hkn-quoteApplication-item--osaka">
+                      <h3>OSAKA</h3>
+                      <a class="hkn-quoteApplication-item-btn" href="">お見積もり&お申し込み</a>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="hkn-quoteApplication-item hkn-quoteApplication-item--webSite">
+                      <h3>OFFICIAL WEB SITE</h3>
+                      <a class="hkn-quoteApplication-item-btn" href="">お見積もり&お申し込み</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" fill="none" viewBox="0 0 8 12">
+                    <path stroke="#282828" stroke-linecap="round" stroke-width="2" d="m6.27 11-5-5M1.27 6l5-5"/>
+                  </svg>
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" fill="none" viewBox="0 0 8 12">
+                    <path stroke="#282828" stroke-linecap="round" stroke-width="2" d="m1.15 1 5 5M6.15 6l-5 5"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <p>※直営店以外でMATE.BIKEを購入された方は、<br>
+              「OFFICIAL WEB SITE」をお選びください。</p>
+            <div class="hkn-quoteApplication-note">
+              <p>「MATE.盗難&車両保険」はSBI日本少額短期保険株式会社が販売する自転車専用車両保険（正式名称：車両専用保険）です。</p>
+              <p>【募集代理店】株式会社MATE.BIKE JAPAN <br>
+                【引受少額短期保険業者】SBI日本少額短期保険株式会社<br>
+                株式会社MATE.BIKE JAPANは、SBI日本少額短期保険株式会社の保険募集代理店として保険契約締結の媒介を行っており、締結代理権および告知受領権は有しておりません。</p>
+              <p>【ご契約に関するお問い合わせ】<br>
+                SBI日本少額短期保険株式会社<br>
+                カスタマーセンター<br>
+                ・0120-080-828 バイク/自転車保険（ガイダンス２）<br>
+                ・受付時間：全日9：00～17：00（年末年始はお休みをいただいております。）</p>
+            </div>
+            <p>NS2023-082-001(2311)</p>
+          </div>
+        </div>
+      </div>
+      <nav class="hkn-menu--mobile" x-data="{open: false}" @click.outside="open = false" :class="open ? '' : 'closed'">
+        <button class="hkn-menu--mobile-toggle" @click="open = ! open">MENU</button>
+        <div>
+          <ol>
+            <li><a href="#overview">保険概要</a></li>
+            <li><a href="#keyPoints">4つのPoint</a></li>
+            <li><a href="#premiumSimulation">保険料シミュレーション</a></li>
+            <li><a href="#coverageDetails">補償内容</a></li>
+            <li><a href="#quoteApplication">お見積り＆お申し込み</a></li>
+          </ol>
+        </div>
+        <button class="hkn-menu--mobile-close" @click="open = false"></button>
+      </nav>
+    </div>
+    
   </body>
 </html>
