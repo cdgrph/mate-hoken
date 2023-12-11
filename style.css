@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
 .hkn {
   @apply tracking-wide text-black bg-white font-sans overflow-x-hidden;
   p {
@@ -109,7 +112,7 @@
   @apply flex flex-col gap-12 pl-10 lg:pl-0 lg:w-2/3 relative;
   &::before {
     @apply block absolute top-0 right-full whitespace-nowrap font-gibson font-bold z-10 origin-top-right -rotate-90 translate-x-3 lg:-translate-x-8 text-xs tracking-wider;
-    content: 'FOR MATE.OWNER ONLY';
+    content: 'FOR MATE.OWNERS ONLY';
   }
   &::after {
     @apply block absolute top-0 right-0 whitespace-nowrap font-gibson font-bold z-10;
