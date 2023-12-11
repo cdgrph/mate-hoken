@@ -41,7 +41,7 @@ const splide3 = new Splide('#quoteApplication-splide', {
   perPage: 1,
   destroy: true,
   breakpoints: {
-		1024: {
+		1023: {
 			destroy: false,
 		},
   }
